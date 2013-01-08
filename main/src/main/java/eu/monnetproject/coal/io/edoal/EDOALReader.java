@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 
 import java.io.File;
 import java.net.URI;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.AlignmentSerializer;
@@ -20,13 +19,14 @@ import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Individual;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.util.Logging;
 import java.io.Reader;
+import java.util.logging.Logger;
 
 public class EDOALReader implements CoalReader {
 
-    private Logger log = Logging.getLogger(this);
-	private BufferedReader reader;
+
+        private Logger log = Logger.getLogger(EDOALReader.class.getName());	
+        private BufferedReader reader;
 
 	public EDOALReader() {
 	}

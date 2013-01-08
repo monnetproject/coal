@@ -6,15 +6,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.ontology.Entity;
-import eu.monnetproject.util.Logging;
+import java.util.logging.Logger;
 
 public class SVMRankDataFile {
 
 	private File file;
-    private Logger log = Logging.getLogger(this);
+        private Logger log = Logger.getLogger(SVMRankDataFile.class.getName());
 	
 	private FileWriter writer = null;
 	

@@ -41,18 +41,17 @@ import eu.monnetproject.framework.test.TestMonitor;
 import eu.monnetproject.framework.test.annotation.TestCase;
 import eu.monnetproject.framework.test.annotation.TestSuite;
 
-import eu.monnetproject.util.Logging;
 
 import java.util.Collection;
 import java.util.HashSet;
-import eu.monnetproject.util.Logger;
+import java.util.logging.Logger;
 
 @Component(provide=Object.class)
 @TestSuite(label="eu.monnetproject.coal.test.Test")
 public class Test{
 
     
-	private Logger log = Logging.getLogger(this);
+	private Logger log = Logger.getLogger(Test.class.getName());
 //	OntologyTranslator ontologyTranslator;
 	OntologySerializer ontologySerializer;
 

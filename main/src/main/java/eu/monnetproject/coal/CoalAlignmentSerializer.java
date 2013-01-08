@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.AlignmentSerializer;
@@ -13,15 +12,15 @@ import eu.monnetproject.coal.io.skos.SKOSReader;
 import eu.monnetproject.coal.io.skos.SKOSWriter;
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.util.Logging;
 import java.io.Reader;
 import java.io.Writer;
+import java.util.logging.Logger;
 
 public class CoalAlignmentSerializer implements AlignmentSerializer {
 
     private CoalWriter writer;
     private CoalReader reader;
-    private Logger log = Logging.getLogger(this);
+        private Logger log = Logger.getLogger(CoalAlignmentSerializer.class.getName());
     private final OntologySerializer ontoSerializer;
     private boolean xml = Boolean.parseBoolean(Configurator.getConfig("eu.monnetproject.coal").getProperty("xml", "false"));
     

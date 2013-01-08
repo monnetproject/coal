@@ -1,7 +1,6 @@
 package eu.monnetproject.coal;
 
 import java.util.List;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Aligner;
 import eu.monnetproject.align.Alignment;
@@ -10,8 +9,8 @@ import eu.monnetproject.align.Match;
 import eu.monnetproject.coal.svmrank.SVMRankMatcher;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
-import eu.monnetproject.util.Logging;
 import java.io.File;
+import java.util.logging.Logger;
 
 /**
  * Coal implementation of an Aligner.
@@ -21,7 +20,7 @@ import java.io.File;
  */
 public class CoalAligner implements Aligner {
 
-        private Logger log = Logging.getLogger(this);
+        private Logger log = Logger.getLogger(CoalAligner.class.getName());
         private final Matcher coalMatcher;
         public volatile int progress = 0;
 

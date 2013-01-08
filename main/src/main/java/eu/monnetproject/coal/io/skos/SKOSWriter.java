@@ -7,14 +7,13 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.List;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.Match;
 import eu.monnetproject.coal.CoalWriter;
 import eu.monnetproject.ontology.Entity;
-import eu.monnetproject.util.Logging;
 import java.io.Writer;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -23,7 +22,7 @@ import java.io.Writer;
  */
 public class SKOSWriter implements CoalWriter {
 
-    private Logger log = Logging.getLogger(this);
+    private final Logger log = Logger.getLogger(SKOSWriter.class.getName());
     private Writer fileWriter;
     private final boolean xml;
     private volatile int progress = 0;

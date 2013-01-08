@@ -5,29 +5,24 @@
 
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>coal.project</artifactId>
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
     
-    <artifactId>nlp.core</artifactId>
+    <artifactId>coal.nlp.core</artifactId>
     <packaging>bundle</packaging>
 
     <name>eu.monnetproject.nlp.core OSGi Bundle</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>framework.lang</artifactId>
+            <artifactId>language</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ontology</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>framework.util</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

@@ -2,7 +2,6 @@ package eu.monnetproject.coal.demo;
 
 import java.io.File;
 import java.io.IOException;
-import eu.monnetproject.util.Logger;
 
 import com.vaadin.*;
 import com.vaadin.terminal.gwt.server.WebApplicationContext;
@@ -13,20 +12,18 @@ import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.AlignmentSerializer;
 import eu.monnetproject.coal.CoalAligner;
 import eu.monnetproject.coal.CoalAlignment;
-import eu.monnetproject.coal.CoalAlignmentSerializer;
 import eu.monnetproject.data.FileDataSource;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.util.Logging;
-import eu.monnetproject.web.VaadinOSGiApplication;
+import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 
-public class COALDemo extends Application implements VaadinOSGiApplication {
+public class COALDemo extends Application {
 
     private final Alignment alignment = new CoalAlignment(5);
     private final AlignmentSerializer alignmentSerializer;
     private VerticalLayout contentVerticalLayout;
-    private final Logger log = Logging.getLogger(this);
+    private final Logger log = Logger.getLogger(COALDemo.class.getName());
 
     public String getPath() {
         return "/coal";

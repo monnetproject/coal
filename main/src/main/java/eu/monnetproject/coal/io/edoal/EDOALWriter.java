@@ -8,15 +8,11 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.List;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Alignment;
-import eu.monnetproject.align.AlignmentSerializer;
 import eu.monnetproject.align.Match;
-import eu.monnetproject.coal.CoalAlignment;
 import eu.monnetproject.coal.CoalWriter;
 import eu.monnetproject.ontology.Entity;
-import eu.monnetproject.util.Logging;
 
 /**
  * 
@@ -25,7 +21,7 @@ import eu.monnetproject.util.Logging;
  */
 public class EDOALWriter implements CoalWriter {
 
-    private Logger log = Logging.getLogger(this);
+        private java.util.logging.Logger log = java.util.logging.Logger.getLogger(EDOALWriter.class.getName());
     private Writer fileWriter;
     private volatile int progress = 0;
 

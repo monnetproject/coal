@@ -13,12 +13,10 @@ import com.vaadin.ui.VerticalLayout;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import eu.monnetproject.util.Logger;
 
 import com.vaadin.terminal.FileResource;
 import com.vaadin.ui.*;
-
-import eu.monnetproject.util.Logging;
+import java.util.logging.Logger;
 
 public class UploadComponent extends CustomComponent
         implements Upload.SucceededListener,
@@ -26,7 +24,7 @@ public class UploadComponent extends CustomComponent
         Upload.Receiver,
         Button.ClickListener {
 
-    private final Logger log = Logging.getLogger(this);
+    private final Logger log = Logger.getLogger(UploadComponent.class.getName());
     Panel root;         // Root element for contained components.
     Panel srcPanel;   // Panel that contains the uploaded image.
     Panel tgtPanel;   // Panel that contains the uploaded image.

@@ -8,13 +8,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Match;
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
-import eu.monnetproject.util.Logging;
 
 /**
  * Default implementation of Alignment. 
@@ -24,7 +22,7 @@ import eu.monnetproject.util.Logging;
  */
 public class CoalAlignment implements Alignment {
 
-    private Logger log = Logging.getLogger(this);
+        private java.util.logging.Logger log = java.util.logging.Logger.getLogger(CoalAlignment.class.getName());
 
     
     	/**

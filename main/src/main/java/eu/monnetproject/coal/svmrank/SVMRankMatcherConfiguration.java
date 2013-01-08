@@ -7,14 +7,13 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.lang.Language;
-import eu.monnetproject.util.Logging;
+import java.util.logging.Logger;
 
 public class SVMRankMatcherConfiguration {
 
-    private Logger log = Logging.getLogger(this);
+        private Logger log = Logger.getLogger(SVMRankMatcherConfiguration.class.getName());
     private File configFile;
     private List<Language> languages;
     private Properties properties;

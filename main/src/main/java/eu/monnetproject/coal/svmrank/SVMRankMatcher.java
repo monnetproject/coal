@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-import eu.monnetproject.util.Logger;
 
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.Matcher;
@@ -24,8 +23,8 @@ import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.sim.EntitySimilarityMeasure;
-import eu.monnetproject.util.Logging;
 import java.io.InputStreamReader;
+import java.util.logging.Logger;
 
 /**
  * Implementation of an SVMrank model.
@@ -35,7 +34,7 @@ import java.io.InputStreamReader;
  */
 public class SVMRankMatcher implements Matcher {
 
-    private Logger log = Logging.getLogger(this);
+        private Logger log = Logger.getLogger(SVMRankMatcher.class.getName());
     /**
      * We assume the following static variables as target values (see
      * http://www.cs.cornell.edu/People/tj/svm_light/svm_rank.html).
