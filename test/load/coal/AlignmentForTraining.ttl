@@ -1,0 +1,93 @@
+@prefix skos:<http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ContoEconomico> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneAltriAccantonamenti> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherCost> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneMateriePrimeSussidiarieConsumoMerci> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneOneriDiversiGestione> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherCost> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleAltriCosti> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.social.pensions> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleOneriSociali> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.salaries> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleSalariStipendi> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.salaries> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleTotaleCostiPersonale> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleTrattamentoQuiescenzaSimili> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.social.pensions> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneVariazioniRimanenzeMateriePrimeSussidiarieConsumoMerci> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniFinanziarieAltreImmobilizzazioniFinanziarie> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.fin> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniImmaterialiSvalutazioni> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.intan> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniMaterialiSvalutazioni> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.tan> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImposteRedditoEsercizioCorrentiDifferiteAnticipateProventiOneriAdesioneRegimeConsolidatoFiscaleTrasparenzaFiscale> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.tax> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImposteRedditoEsercizioCorrentiDifferiteAnticipateTotaleImposteRedditoEsercizioCorrentiDifferiteAnticipate> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.tax> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PassivoRateiRiscontiTotaleRateiRisconti> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.defIncome> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoAltreRiserveDistintamenteIndicateTotaleAltreRiserve> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.revenueRes> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoCapitale> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.capRes> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoUtilePerditaEsercizioUtilePerditaResidua> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoUtiliPerditePortatiNuovo> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.retainedEarnings> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriFinanziariAltriProventiFinanziariTotaleAltriProventiFinanziari> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.fin> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariOneriAltri> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.expenses> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariOneriTotaleOneri> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.expenses> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariProventiAltri> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.income> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariProventiTotaleProventi> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.income> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/StatoPatrimoniale> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivitaFinanziarieNonCostituisconoImmobilizzazioni> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.securities> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivoCircolante> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivo> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleCrediti> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.receiv> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleDebiti> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.liab> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniFinanziarie> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.fin> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioni> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniImmateriali> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.intan> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniMateriali> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.tan> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePartiteStraordinarie> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePassivo> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePatrimonioNetto> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleRimanenze> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.inventory> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleValoreProduzione> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TrattamentoFineRapportoLavoroSubordinato> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.accruals.pensions> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneAltriRicaviProventiTotaleAltriRicaviProventi> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherOpRevenue> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneIncrementiImmobilizzazioniLavoriInterni> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.inventoryChange> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneRicaviVenditePrestazioni> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneVariazioniLavoriCorsoOrdinazione> skos:exactMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.ownWork> .
+
+<http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneVariazioniRimanenzeProdottiCorsoLavorazioneSemilavoratiFinitiLavoriCorsoOrdinazione> skos:closeMatch <http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput> .

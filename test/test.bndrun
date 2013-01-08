@@ -1,0 +1,25 @@
+-runfw: org.apache.felix.framework;version=3.0.4
+-runbundles:osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	eu.monnetproject.core;version=latest,\
+	eu.monnetproject.nlp;version=latest,\
+	com.vaadin,\
+	eu.monnetproject.webaccess.translator;version=latest,\
+	org.openrdf.sesame,\
+	slf4j.jdk14,\
+	slf4j.api,\
+	eu.monnetproject.framework.test;version=latest,\
+	eu.monnetproject.framework.test.runner;version=latest,\
+	eu.monnetproject.framework.test.annotationprocessor;version=latest,\
+	eu.monnetproject.framework.test.reporter;version=latest,\
+	org.apache.commons.lang,\
+	eu.monnetproject.coal;version=latest,\
+	org.apache.felix.dependencymanager,\
+	javax.servlet,\
+	org.knallgrau.textcat,\
+	org.apache.felix.scr,\
+	eu.monnetproject.nlp.owlapi;version=latest,\
+	org.semanticweb.owl.owlapi,\
+	log4j

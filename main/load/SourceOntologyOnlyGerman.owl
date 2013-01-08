@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#"
+     xml:base="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherCustomLabelProperty">
+        <someCustomLabelProperty xml:lang="de">Eine andere eigene Bezeichnungseigenschaft</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine andere eigene Bezeichnungseigenschaft [alternativ]</someOtherCustomLabelProperty>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someCustomLabelProperty">
+        <someCustomLabelProperty xml:lang="de">Eine eigene Bezeichnungseigenschaft</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine eigene Bezeichnungseigenschaft [alternativ]</someOtherCustomLabelProperty>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherProperty">
+        <someCustomLabelProperty xml:lang="de">Eine andere Eigenschaft</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine andere Eigenschaft [alternativ]</someOtherCustomLabelProperty>
+        <rdfs:domain rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass"/>
+        <rdfs:range rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someProperty">
+        <someCustomLabelProperty xml:lang="de">Eine Eigenschaft</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine Eigenschaft [alternativ]</someOtherCustomLabelProperty>
+        <rdfs:domain rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass"/>
+        <rdfs:range rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass -->
+
+    <owl:Class rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass">
+        <someCustomLabelProperty xml:lang="de">Eine Klasse</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine Klasse [alternativ]</someOtherCustomLabelProperty>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass -->
+
+    <owl:Class rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass">
+        <someCustomLabelProperty xml:lang="de">Eine andere Klasse</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine andere Klasse [alternativ]</someOtherCustomLabelProperty>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeSubClassOfSomeOtherClass -->
+
+    <owl:Class rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeSubClassOfSomeOtherClass">
+        <rdfs:subClassOf rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass"/>
+        <someCustomLabelProperty xml:lang="de">Eine Unterklasse einer anderen Klasse</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine Unterklasse einer anderen Klasse [alternativ]</someOtherCustomLabelProperty>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeClass">
+        <rdf:type rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass"/>
+        <someCustomLabelProperty xml:lang="de">Eine Instanz einer Klasse</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine Instanz einer Klasse [alternativ]</someOtherCustomLabelProperty>
+        <someProperty rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeClass"/>
+        <someOtherProperty rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeSubClassOfSomeOtherClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeSubClassOfSomeOtherClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeInstanceOfSomeSubClassOfSomeOtherClass">
+        <rdf:type rdf:resource="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeSubClassOfSomeOtherClass"/>
+        <someCustomLabelProperty xml:lang="de">Eine Instanz einer Unterklasse einer anderen Klasse</someCustomLabelProperty>
+        <someOtherCustomLabelProperty xml:lang="de">Eine Instanz einer Unterklasse einer anderen Klasse [alternativ]</someOtherCustomLabelProperty>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

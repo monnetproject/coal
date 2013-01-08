@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+ <Alignment>
+  <onto1>
+   <Ontology rdf:about="http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl" />
+  </onto1>
+  <onto2>
+   <Ontology rdf:about="http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl" />
+  </onto2>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherCustomLabelProperty' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentCustomLabelProperty' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.75140937</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentClass' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.60681165</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someCustomLabelProperty' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentCustomLabelProperty' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.66682689</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.w3.org/2000/01/rdf-schema#label' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentClass' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.47064953</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeSubClassOfSomeOtherClass' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentSubClassOfADifferentClass' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.64635445</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someProperty' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.51279058</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherProperty' />
+    <entity2 rdf:resource='http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty' />
+    <relation>=</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.63719195</measure>
+   </Cell>
+  </map>
+ </Alignment>
+</rdf:RDF>

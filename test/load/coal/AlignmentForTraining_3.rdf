@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:skos='http://www.w3.org/2004/02/skos/core#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+ <Alignment>
+  <onto1>
+   <Ontology rdf:about="http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/" >
+    <location>file:load/xbrl/output/itcc-ci-2009-02-16.nt</location>
+   </Ontology>
+  </onto1>
+  <onto2>
+   <Ontology rdf:about="http://www.xbrl.fr/fr/fr/ca/2009-04-20/" >
+    <location>file:load/xbrl/output/tca-2009-04-20.nt</location>
+   </Ontology>
+  </onto2>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzione' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesDExploitationPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzioneMateriePrimeSussidiarieConsumoMerci' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CoutDAchatDesMarchandisesVenduesYComprisFraisAccessoires' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzionePersonaleOneriSociali' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/SalairesEtTraitements' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzionePersonaleSalariStipendi' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/SalairesEtTraitements' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzionePersonaleTotaleCostiPersonale' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesDePersonnel' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CostiProduzioneVariazioniRimanenzeMateriePrimeSussidiarieConsumoMerci' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CoutDAchatDesMarchandisesVenduesYComprisFraisAccessoires' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/CreditiVersoSociVersamentiAncoraDovutiParteRichiamare' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CapitalSouscritAppeleNonVerse' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/Debiti' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/DettesPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ImmobilizzazioniFinanziarieAltreImmobilizzazioniFinanziarie' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsFinancieresNet' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/Immobilizzazioni' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ActifImmobiliseEtCapitalSouscritNonAppeleNetPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ImmobilizzazioniImmaterialiSvalutazioni' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsIncorporellesNet' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ImmobilizzazioniMaterialiSvalutazioni' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsCorporellesNet' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ImposteRedditoEsercizioCorrentiDifferiteAnticipateProventiOneriAdesioneRegimeConsolidatoFiscaleTrasparenzaFiscale' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImpotsSurLesBeneficesChargesProduits' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ImposteRedditoEsercizioCorrentiDifferiteAnticipateTotaleImposteRedditoEsercizioCorrentiDifferiteAnticipate' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImpotsSurLesBeneficesChargesProduits' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/Passivo' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/BilanPassifPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PassivoRateiRiscontiTotaleRateiRisconti' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/EcartsDeConversionPassif' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PatrimonioNettoAltreRiserveDistintamenteIndicateTotaleAltreRiserve' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/Reserves' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PatrimonioNettoCapitale' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/Capital' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PatrimonioNetto' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CapitauxPropresPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PatrimonioNettoUtilePerditaEsercizioUtilePerditaResidua' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ResultatDeLExerciceBilanBeneficePerte' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/PatrimonioNettoUtiliPerditePortatiNuovo' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ReportANouveauCrediteurDebiteur' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriFinanziariAltriProventiFinanziariTotaleAltriProventiFinanziari' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsFinanciers' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriFinanziariInteressiAltriOneriFinanziari' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesFinancieresPresentation' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinari' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsExceptionnelsPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinariOneriAltri' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesExceptionnelles' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinariOneri' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesExceptionnellesPresentation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinariOneriTotaleOneri' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesExceptionnelles' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinariProventiAltri' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsExceptionnels' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ProventiOneriStraordinariProventiTotaleProventi' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsExceptionnels' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleAttivo' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/BilanActifNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleCostiProduzione' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesDExploitation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleCreditiVersoSociVersamentiAncoraDovuti' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CapitalSouscritAppeleNonVerse' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleDebiti' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/Dettes' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleDisponibilitaLiquide' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/DisponibilitesNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleImmobilizzazioniFinanziarie' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsFinancieresNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleImmobilizzazioni' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ActifImmobiliseEtCapitalSouscritNonAppeleNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleImmobilizzazioniImmateriali' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsIncorporellesNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleImmobilizzazioniMateriali' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ImmobilisationsCorporellesNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotalePassivo' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/BilanPassif' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotalePatrimonioNetto' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CapitauxPropres' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleProventiOneriFinanziari' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChargesFinancieres' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/TotaleValoreProduzione' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsDExploitation' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/UtilePerditaEsercizio' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/CompteDeResultatCreditTotal' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ValoreProduzioneRicaviVenditePrestazioni' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ChiffreDAffairesNet' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ValoreProduzioneVariazioniLavoriCorsoOrdinazione' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProductionImmobilisee' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2009-02-16/ValoreProduzioneVariazioniRimanenzeProdottiCorsoLavorazioneSemilavoratiFinitiLavoriCorsoOrdinazione' />
+    <entity2 rdf:resource='http://www.xbrl.fr/fr/fr/ca/2009-04-20/ProduitsDExploitation' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

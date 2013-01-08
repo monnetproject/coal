@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+	 xmlns:skos='http://www.w3.org/2004/02/skos/core#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+ <Alignment>
+  <onto1>
+   <Ontology rdf:about="http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/" >
+    <location rdf:about="file:/home/dspohr/Bielefeld/Projects/MONNET/dev-workspace/eu.monnetproject.coal/load/upload/itcc-ci-2011-01-04.nt" />
+   </Ontology>
+  </onto1>
+  <onto2>
+   <Ontology rdf:about="http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/" >
+    <location rdf:about="file:/home/dspohr/Bielefeld/Projects/MONNET/svn/monnet-wp1/XBRL/taxonomies/default/hgb-taxonomy-v41/hgb-taxonomy-v41/xbrl/de-gaap-ci-2011-02-28/rdf/de-gaap-ci-2011-02-28.nt" />
+   </Ontology>
+  </onto2>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ContoEconomico' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneAltriAccantonamenti' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherCost' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneMateriePrimeSussidiarieConsumoMerci' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneOneriDiversiGestione' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherCost' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleAltriCosti' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.social.pensions' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleOneriSociali' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.salaries' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleSalariStipendi' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.salaries' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleTotaleCostiPersonale' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzionePersonaleTrattamentoQuiescenzaSimili' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.staff.social.pensions' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/CostiProduzioneVariazioniRimanenzeMateriePrimeSussidiarieConsumoMerci' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniFinanziarieAltreImmobilizzazioniFinanziarie' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.fin' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniImmaterialiSvalutazioni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.intan' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImmobilizzazioniMaterialiSvalutazioni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.tan' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImposteRedditoEsercizioCorrentiDifferiteAnticipateProventiOneriAdesioneRegimeConsolidatoFiscaleTrasparenzaFiscale' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.tax' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ImposteRedditoEsercizioCorrentiDifferiteAnticipateTotaleImposteRedditoEsercizioCorrentiDifferiteAnticipate' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.tax' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PassivoRateiRiscontiTotaleRateiRisconti' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.defIncome' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoAltreRiserveDistintamenteIndicateTotaleAltreRiserve' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.revenueRes' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoCapitale' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.capRes' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoUtilePerditaEsercizioUtilePerditaResidua' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/PatrimonioNettoUtiliPerditePortatiNuovo' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity.retainedEarnings' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriFinanziariAltriProventiFinanziariTotaleAltriProventiFinanziari' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.fin' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariOneriAltri' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.expenses' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariOneriTotaleOneri' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.expenses' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariProventiAltri' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.income' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ProventiOneriStraordinariProventiTotaleProventi' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord.income' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/StatoPatrimoniale' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivitaFinanziarieNonCostituisconoImmobilizzazioni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.securities' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivoCircolante' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleAttivo' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleCrediti' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.receiv' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleDebiti' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.liab' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniFinanziarie' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.fin' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniImmateriali' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.intan' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleImmobilizzazioniMateriali' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.fixAss.tan' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePartiteStraordinarie' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.extraord' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePassivo' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotalePatrimonioNetto' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.equity' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleRimanenze' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.ass.currAss.inventory' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TotaleValoreProduzione' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/TrattamentoFineRapportoLavoroSubordinato' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/bs.eqLiab.accruals.pensions' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneAltriRicaviProventiTotaleAltriRicaviProventi' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.otherOpRevenue' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneIncrementiImmobilizzazioniLavoriInterni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.inventoryChange' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneRicaviVenditePrestazioni' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneVariazioniLavoriCorsoOrdinazione' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.ownWork' />
+    <relation>skos:exactMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+  <map>
+   <Cell>
+    <entity1 rdf:resource='http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/ValoreProduzioneVariazioniRimanenzeProdottiCorsoLavorazioneSemilavoratiFinitiLavoriCorsoOrdinazione' />
+    <entity2 rdf:resource='http://www.xbrl.de/de/fr/gaap/ci/2011-02-28/is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput' />
+    <relation>skos:closeMatch</relation>
+    <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+   </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>
