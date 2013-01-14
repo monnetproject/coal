@@ -79,5 +79,22 @@
             <artifactId>framework.config</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>framework.services</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ontology.owlapi</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>coal.nlp.sim</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 </project>

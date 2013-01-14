@@ -50,6 +50,7 @@
     <modules>
         <module>main</module>    
         <module>nlp.core</module>
+        <module>nlp.sim</module>
         <module>test</module>    
         <module>web</module>
   </modules>
