@@ -112,8 +112,8 @@ public class SVMRankMatcher implements Matcher {
         Properties properties = Configurator.getConfig("eu.monnetproject.coal");
 
         File f = new File(properties.getProperty("matcher", "load/matcher.cfg").toString());
-        this.svmRankClassify = new File(properties.getProperty("svm_rank_classify", "load/svm_rank_classify").toString());
-        this.svmRankLearn = new File(properties.getProperty("svm_rank_learn", "load/svm_rank_learn").toString());
+        this.svmRankClassify = new File(properties.getProperty("svm_rank_classify", "load/svm_rank_classify").toString() + (System.getProperty("os.name").startsWith("Windows") ? ".exe" : ""));
+        this.svmRankLearn = new File(properties.getProperty("svm_rank_learn", "load/svm_rank_learn").toString() + (System.getProperty("os.name").startsWith("Windows") ? ".exe" : ""));
         this.matcherConfig = new SVMRankMatcherConfiguration(f);
         this.trained = this.matcherConfig.hasModel();
         this.ignoreInstances = this.matcherConfig.ignoreInstances();
