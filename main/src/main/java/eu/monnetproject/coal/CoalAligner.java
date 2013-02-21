@@ -120,7 +120,7 @@ public class CoalAligner implements Aligner {
     }
 
     public static void main(String[] args) throws Exception {
-        args = "load/SourceOntology.owl load/TargetOntology.owl out 5".split(" ");
+        //args = "load/SourceOntology.owl load/TargetOntology.owl out 5".split(" ");
         if (args.length != 3 && args.length != 4) {
             System.err.println("Usage:\tmvn exec:java -Dexec.mainClass=\"" + CoalAligner.class.getCanonicalName() + "\" -Dexec.args=\"ontology1 ontology2 output [noOfMatches]\"");
             System.exit(-1);
