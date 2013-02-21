@@ -30,6 +30,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
  *
@@ -56,6 +57,8 @@ public class CoalTranslatorTest {
     public void tearDown() {
     }
 
+    @Test public void noTest() { }
+    
     /**
      * Test of translate method, of class CoalTranslator.
      */
