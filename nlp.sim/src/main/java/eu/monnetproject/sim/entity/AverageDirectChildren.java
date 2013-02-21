@@ -5,8 +5,6 @@ import java.util.Collection;
 import java.util.Properties;
 import eu.monnetproject.util.Logger;
 
-import aQute.bnd.annotation.component.Activate;
-import aQute.bnd.annotation.component.Component;
 
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.sim.EntitySimilarityMeasure;
@@ -20,7 +18,6 @@ import eu.monnetproject.util.Logging;
  * @author Dennis Spohr
  *
  */
-@Component(provide=EntitySimilarityMeasure.class)
 public class AverageDirectChildren implements EntitySimilarityMeasure {
 	
     private Logger log = Logging.getLogger(this);
@@ -28,12 +25,7 @@ public class AverageDirectChildren implements EntitySimilarityMeasure {
 	
 	public AverageDirectChildren() {
 	}
-	
-	@Activate
-	public void start() {
-		log.info("Activating "+this.name);
-	}
-	
+		
     public void configure(Properties properties) {
     }
     

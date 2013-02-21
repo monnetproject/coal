@@ -6,7 +6,6 @@ import eu.monnetproject.sim.util.Functions;
 import java.util.List;
 import java.util.Vector;
 
-import aQute.bnd.annotation.component.Component;
 import eu.monnetproject.tokenizer.Token;
 
 
@@ -16,7 +15,6 @@ import eu.monnetproject.tokenizer.Token;
  * @author Dennis Spohr
  *
  */
-@Component(provide=TokenSimilarityMeasure.class,properties="measure=BagOfWordsCosine")
 public class TokenBagOfWordsCosine implements TokenSimilarityMeasure {
 
 	@Override

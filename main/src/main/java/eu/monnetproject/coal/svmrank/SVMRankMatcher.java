@@ -90,9 +90,13 @@ public class SVMRankMatcher implements Matcher {
 //		this.trained = true;
 //	}
     public SVMRankMatcher(Collection<EntitySimilarityMeasure> entitySimilarityMeasures) {
+        if(entitySimilarityMeasures.isEmpty()) {
+            throw new IllegalArgumentException("No similarity measures");
+        }
         for (EntitySimilarityMeasure measure : entitySimilarityMeasures) {
             this.tmpMeasures.add(measure);
             this.tmpMeasureNames.add(measure.getClass().getName());
+            System.err.println("Using metric: " + measure.getClass().getName());
         }
         start();
     }

@@ -1,6 +1,5 @@
 package eu.monnetproject.sim.string;
 
-import aQute.bnd.annotation.component.Component;
 import eu.monnetproject.sim.StringSimilarityMeasure;
 
 /**
@@ -9,7 +8,6 @@ import eu.monnetproject.sim.StringSimilarityMeasure;
  * @author Tobias Wunner
  *
  */
-@Component(provide=StringSimilarityMeasure.class,properties={"measure=Levenshtein"})
 public class Levenshtein implements StringSimilarityMeasure {
 
 /*	private int minimum(int a, int b, int c) {

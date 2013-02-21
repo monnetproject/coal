@@ -1,9 +1,6 @@
 package eu.monnetproject.sim.string;
-
-import aQute.bnd.annotation.component.Component;
 import eu.monnetproject.sim.StringSimilarityMeasure;
 
-@Component(provide=StringSimilarityMeasure.class,properties="measure=Substring")
 public class SubstringSimilarityMeasure implements StringSimilarityMeasure {
 
 	private final String name = "Substring Similarity";

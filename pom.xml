@@ -53,6 +53,7 @@
         <module>nlp.sim</module>
         <module>test</module>    
         <module>web</module>
+    <module>translation</module>
   </modules>
   
     <dependencies>

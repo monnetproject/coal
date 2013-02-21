@@ -8,20 +8,19 @@ import java.util.Map;
 import java.util.Properties;
 import eu.monnetproject.util.Logger;
 
-import aQute.bnd.annotation.component.Activate;
-import aQute.bnd.annotation.component.Component;
-import aQute.bnd.annotation.component.Reference;
-
 import eu.monnetproject.label.LabelExtractor;
 import eu.monnetproject.label.LabelExtractorFactory;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.sim.EntitySimilarityMeasure;
 import eu.monnetproject.sim.StringSimilarityMeasure;
+import eu.monnetproject.sim.string.Levenshtein;
+import eu.monnetproject.sim.token.TokenBagOfWordsCosine;
 import eu.monnetproject.sim.util.Functions;
 import eu.monnetproject.sim.util.SimilarityUtils;
+import eu.monnetproject.tokenizer.FairlyGoodTokenizer;
 import eu.monnetproject.tokenizer.Tokenizer;
-import eu.monnetproject.translator.Translator;
+import eu.monnetproject.translatorimpl.Translator;
 import eu.monnetproject.util.Logging;
 
 /**
@@ -32,7 +31,6 @@ import eu.monnetproject.util.Logging;
  * @author Dennis Spohr
  *
  */
-@Component(provide=EntitySimilarityMeasure.class,properties={"measure=Levenshtein"})
 public class AverageAverageLevenshteinSorted implements EntitySimilarityMeasure {
 	
     private Logger log = Logging.getLogger(this);
@@ -45,54 +43,13 @@ public class AverageAverageLevenshteinSorted implements EntitySimilarityMeasure 
 	private Translator translator;
 	private Tokenizer tokenizer;
 	
-	public AverageAverageLevenshteinSorted() {
+	public AverageAverageLevenshteinSorted(LabelExtractorFactory lef) {
+            this.lef = lef;
+            this.measure = new Levenshtein();
+            this.tokenizer = new FairlyGoodTokenizer();
+            this.translator = new Translator();
 	}
 	
-	@Activate
-	public void start() {
-		log.info("Activating "+this.name);
-	}
-	
-	@Reference
-	public void bindLabelExtractorFactory(LabelExtractorFactory lef) {
-		log.info("Binding label extractor factory to "+lef);
-		this.lef = lef;
-	}
-
-	public void unbindLabelExtractorFactory(LabelExtractorFactory lef) {
-		log.info("Removing label extractor factory "+lef);
-		this.lef = null;
-	}
-
-	@Reference(service=StringSimilarityMeasure.class,type='+')
-	public void addMeasure(StringSimilarityMeasure measure, Map props) {
-		if (props.get("measure") != null && props.get("measure").equals("Levenshtein")) {
-			this.measure = measure;
-			log.info("Binding measure to "+measure);
-		}
-	}
-
-	public void removeMeasure(StringSimilarityMeasure measure) {
-		log.info("Removing measure "+measure);
-		this.measure = null;
-	}
-
-    @Reference(type='?')
-    public void bindTranslator(Translator t) {
-    	log.info("Binding translator "+t);
-    	this.translator  = t;
-    }
-    
-	@Reference(type='+')
-	public void addTokenizer(Tokenizer tok) {
-		log.info("Binding tokenizer to "+tok);
-		this.tokenizer = tok;
-	}
-
-	public void removeTokenizer(Tokenizer tok) {
-		log.info("Removing tokenizer "+tok);
-		this.tokenizer = null;
-	}
 
 	public void configure(Properties properties) {
 		this.languages = SimilarityUtils.getLanguages(properties.getProperty("languages", ""));    	

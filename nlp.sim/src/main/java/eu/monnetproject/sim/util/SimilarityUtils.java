@@ -24,8 +24,8 @@ import eu.monnetproject.ontology.LiteralValue;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.Property;
 import eu.monnetproject.tokenizer.Token;
-import eu.monnetproject.translator.Translation;
-import eu.monnetproject.translator.Translator;
+import eu.monnetproject.translatorimpl.Translation;
+import eu.monnetproject.translatorimpl.Translator;
 import eu.monnetproject.util.Logging;
 
 public class SimilarityUtils {

@@ -9,9 +9,11 @@ import eu.monnetproject.align.Matcher;
 import eu.monnetproject.align.Match;
 import eu.monnetproject.coal.svmrank.SVMRankMatcher;
 import eu.monnetproject.framework.services.Services;
+import eu.monnetproject.label.LabelExtractorFactory;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
+import eu.monnetproject.sim.EntitySimilarityMeasure;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Collections;
@@ -41,6 +43,12 @@ public class CoalAligner implements Aligner {
 
     public Alignment align(Ontology ontlg, Ontology ontlg1) {
         Alignment alignment = new CoalAlignment();
+        align(ontlg1, ontlg1, alignment);
+        return alignment;
+    }
+    
+    public Alignment align(Ontology ontlg, Ontology ontlg1, int k) {
+        Alignment alignment = new CoalAlignment(k);
         align(ontlg1, ontlg1, alignment);
         return alignment;
     }
@@ -112,16 +120,24 @@ public class CoalAligner implements Aligner {
     }
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 3) {
-            System.err.println("Usage:\tmvn exec:java -Dexec.mainClass=\"" + CoalAligner.class.getCanonicalName() + "\" -Dexec.args=\"ontology1 ontology2 output\"");
+        args = "load/SourceOntology.owl load/TargetOntology.owl out 5".split(" ");
+        if (args.length != 3 && args.length != 4) {
+            System.err.println("Usage:\tmvn exec:java -Dexec.mainClass=\"" + CoalAligner.class.getCanonicalName() + "\" -Dexec.args=\"ontology1 ontology2 output [noOfMatches]\"");
             System.exit(-1);
         }
+        Services.get(LabelExtractorFactory.class);
         final OntologySerializer serializer = Services.get(OntologySerializer.class);
         final AlignmentSerializer alignSerializer = Services.get(AlignmentSerializer.class);
-        final Aligner aligner = Services.get(Aligner.class);
+        final Aligner aligner = new CoalAligner(new SVMRankMatcher(Services.getAll(EntitySimilarityMeasure.class)));
         final Ontology ontology1 = serializer.read(new FileReader(args[0]));
         final Ontology ontology2 = serializer.read(new FileReader(args[1]));
-        final Alignment alignment = aligner.align(ontology1, ontology2);
+        final int noOfMatches;
+        if(args.length == 4) {
+            noOfMatches = Integer.parseInt(args[3]);
+        } else {
+            noOfMatches = 1;
+        }
+        final Alignment alignment = aligner.align(ontology1, ontology2, noOfMatches);
         alignSerializer.writeAlignment(alignment, new File(args[2]));
         
         // Print scores (for Xichuan)

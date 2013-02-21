@@ -5,17 +5,16 @@ import java.util.Map;
 import java.util.Properties;
 import eu.monnetproject.util.Logger;
 
-import aQute.bnd.annotation.component.Activate;
-import aQute.bnd.annotation.component.Component;
-import aQute.bnd.annotation.component.Reference;
-
 import eu.monnetproject.label.LabelExtractorFactory;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.sim.EntitySimilarityMeasure;
 import eu.monnetproject.sim.StringSimilarityMeasure;
+import eu.monnetproject.sim.string.Levenshtein;
+import eu.monnetproject.sim.token.TokenBagOfWordsCosine;
 import eu.monnetproject.sim.util.Functions;
 import eu.monnetproject.sim.util.SimilarityUtils;
-import eu.monnetproject.translator.Translator;
+import eu.monnetproject.tokenizer.FairlyGoodTokenizer;
+import eu.monnetproject.translatorimpl.Translator;
 import eu.monnetproject.util.Logging;
 
 /**
@@ -24,7 +23,6 @@ import eu.monnetproject.util.Logging;
  * @author Dennis Spohr
  *
  */
-@Component(provide=EntitySimilarityMeasure.class)
 public class BestFirstStringDifferenceDirectParentChildren implements EntitySimilarityMeasure {
 	
     private Logger log = Logging.getLogger(this);
@@ -35,49 +33,13 @@ public class BestFirstStringDifferenceDirectParentChildren implements EntitySimi
 	private Translator translator;
 
 	
-	public BestFirstStringDifferenceDirectParentChildren() {
+	public BestFirstStringDifferenceDirectParentChildren(LabelExtractorFactory lef) {
+            this.lef = lef;
+            this.stringMeasure = new Levenshtein();
+            this.translator = new Translator();
+            this.subMeasure = new AverageAverageLevenshtein(lef,translator,stringMeasure);
 	}
 	
-	/*
-	 * subMeasure isn't bound via @Reference since this results in a cycle for EntitySimilarityMeasure. Therefore, 
-	 * all references required by subMeasure are bound here and passed on when this measure is activated.
-	 */
-	@Activate
-	public void start() {
-		log.info("Activating "+this.name);
-		this.subMeasure = new AverageAverageLevenshtein(lef,translator,stringMeasure);
-	}
-	
-	@Reference
-	public void bindLabelExtractorFactory(LabelExtractorFactory lef) {
-		log.info("Binding label extractor factory to "+lef);
-		this.lef = lef;
-	}
-
-	public void unbindLabelExtractorFactory(LabelExtractorFactory lef) {
-		log.info("Removing label extractor factory "+lef);
-		this.lef = null;
-	}
-
-	@Reference(service=StringSimilarityMeasure.class,type='+')
-	public void addMeasure(StringSimilarityMeasure measure, Map props) {
-		if (props.get("measure") != null && props.get("measure").equals("Levenshtein")) {
-			this.stringMeasure = measure;
-			log.info("Binding measure to "+measure);
-		}
-	}
-
-	public void removeMeasure(StringSimilarityMeasure measure) {
-		log.info("Removing measure "+measure);
-		this.stringMeasure = null;
-	}
-
-    @Reference(type='?')
-    public void bindTranslator(Translator t) {
-    	log.info("Binding translator "+t);
-    	this.translator  = t;
-    }
-    	
 	public void configure(Properties properties) {
 		subMeasure.configure(properties);
     }
