@@ -20,7 +20,7 @@ import javax.servlet.ServletContext;
 
 public class COALDemo extends Application {
 
-    private final Alignment alignment = new CoalAlignment(5);
+    private final Alignment alignment = new CoalAlignment(5,null,null);
     private final AlignmentSerializer alignmentSerializer;
     private VerticalLayout contentVerticalLayout;
     private final Logger log = Logger.getLogger(COALDemo.class.getName());
@@ -137,7 +137,9 @@ public class COALDemo extends Application {
             this.progressThread = new ProgressThread(this, srcOnto.getEntities().size(), "Aligning", new AlignerProgressWrapper());
             progressThread.start();
 
-            aligner.align(srcOnto, tgtOnto, alignment);
+            alignment.setSourceOntology(srcOnto);
+            alignment.setTargetOntology(tgtOnto);
+            aligner.align(alignment);
 
             finished = true;
 

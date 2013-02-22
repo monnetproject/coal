@@ -35,6 +35,7 @@ import eu.monnetproject.align.AlignmentSerializer;
 import eu.monnetproject.align.Matcher;
 import eu.monnetproject.ontology.OntologySerializer;
 import eu.monnetproject.ontology.Ontology;
+import eu.monnetproject.coal.CoalAlignment;
 import eu.monnetproject.data.FileDataSource;
 import aQute.bnd.annotation.component.*;
 import eu.monnetproject.framework.test.TestMonitor;
@@ -75,8 +76,16 @@ public class Test{
 		alignments.add(this.alignmentSerializer.readAlignment(new File(inputFileName)));
 		alignments.add(this.alignmentSerializer.readAlignment(new File(inputFileName2)));
 		//alignments.add(this.alignmentSerializer.readAlignment(new File(inputFileName3)));
+		final File modelFile;
+		try {
+			modelFile = File.createTempFile("model", ".dat");
+		} catch(IOException x) {
+			throw new RuntimeException(x);
+		}
+		modelFile.deleteOnExit();
+		new File(modelFile.getPath() + ".cfg").deleteOnExit();
 		
-		this.matcher.train(alignments);
+		this.matcher.train(alignments,modelFile);
 		
 		log.info("Reading source ontology");
 		Ontology srcOnt = ontologySerializer.read(new FileDataSource(srcFileName));
@@ -86,10 +95,10 @@ public class Test{
 		log.info(srcOnt.getEntities().size()+" entities in source ontology");
 		log.info(tgtOnt.getEntities().size()+" entities in target ontology");
 		
-		Alignment alignment = this.alignmentSerializer.createAlignment();
+		Alignment alignment = new CoalAlignment(srcOnt, tgtOnt);
 		
 		log.info("Calling aligner.align");
-		this.aligner.align(srcOnt, tgtOnt, alignment);
+		this.aligner.align(alignment);
 		log.info("Done aligning");
 
 		try {
