@@ -20,10 +20,10 @@ public class CoalAlignmentSerializer implements AlignmentSerializer {
 
     private CoalWriter writer;
     private CoalReader reader;
-        private Logger log = Logger.getLogger(CoalAlignmentSerializer.class.getName());
+    private Logger log = Logger.getLogger(CoalAlignmentSerializer.class.getName());
     private final OntologySerializer ontoSerializer;
     private boolean xml = Boolean.parseBoolean(Configurator.getConfig("eu.monnetproject.coal").getProperty("xml", "false"));
-    
+
     public CoalAlignmentSerializer(OntologySerializer serializer) {
         this.ontoSerializer = serializer;
     }
@@ -31,7 +31,7 @@ public class CoalAlignmentSerializer implements AlignmentSerializer {
     public void setXml(boolean xml) {
         this.xml = xml;
     }
-    
+
     @Override
     public void writeAlignment(Alignment alignment, File file) throws IOException {
         writer = new SKOSWriter(xml);
@@ -43,9 +43,9 @@ public class CoalAlignmentSerializer implements AlignmentSerializer {
         writer = new SKOSWriter(xml);
         writer.write(alignment, stream);
     }
-    
+
     @Override
-    public void writeAlignment(Alignment alignment,Writer writer) throws IOException {
+    public void writeAlignment(Alignment alignment, Writer writer) throws IOException {
         this.writer = new SKOSWriter(xml);
         this.writer.write(alignment, writer);
     }
@@ -56,26 +56,29 @@ public class CoalAlignmentSerializer implements AlignmentSerializer {
         }
         return writer.getProgress();
     }
-
-    @Override
-    public Alignment createAlignment() {
-        return new CoalAlignment();
-    }
-
-    @Override
-    public Alignment createAlignment(int k) {
-        return new CoalAlignment(k);
-    }
+//
+//    @Override
+//    public Alignment createAlignment() {
+//        return new CoalAlignment();
+//    }
+//
+//    @Override
+//    public Alignment createAlignment(int k) {
+//        return new CoalAlignment(k);
+//    }
 
     @Override
     public Alignment readAlignment(File file) {
         try {
             reader = new EDOALReader();
-            return reader.readAlignment(file, this, this.ontoSerializer);
+            final Alignment alignment = reader.readAlignment(file, this, this.ontoSerializer);
+            if (!alignment.isEmpty()) {
+                return alignment;
+            }
         } catch (Exception x) {
-            reader = new SKOSReader();
-            return reader.readAlignment(file, this, ontoSerializer);
         }
+        reader = new SKOSReader();
+        return reader.readAlignment(file, this, ontoSerializer);
 
     }
 
@@ -83,23 +86,27 @@ public class CoalAlignmentSerializer implements AlignmentSerializer {
     public Alignment readAlignment(InputStream stream) {
         try {
             reader = new EDOALReader();
-            return reader.readAlignment(stream, this, this.ontoSerializer);
+            final Alignment alignment = reader.readAlignment(stream, this, this.ontoSerializer);
+            if (!alignment.isEmpty()) {
+                return alignment;
+            }
         } catch (Exception x) {
-            reader = new SKOSReader();
-            return reader.readAlignment(stream, this, ontoSerializer);
         }
+        reader = new SKOSReader();
+        return reader.readAlignment(stream, this, ontoSerializer);
 
     }
 
     public Alignment readAlignment(Reader reader) {
         try {
             this.reader = new EDOALReader();
-            return this.reader.readAlignment(reader, this, this.ontoSerializer);
+            final Alignment alignment = this.reader.readAlignment(reader, this, this.ontoSerializer);
+            if (!alignment.isEmpty()) {
+                return alignment;
+            }
         } catch (Exception x) {
-            this.reader = new SKOSReader();
-            return this.reader.readAlignment(reader, this, ontoSerializer);
         }
+        this.reader = new SKOSReader();
+        return this.reader.readAlignment(reader, this, ontoSerializer);
     }
-    
-    
 }

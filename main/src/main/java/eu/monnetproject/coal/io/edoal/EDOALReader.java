@@ -12,6 +12,7 @@ import java.net.URI;
 
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.AlignmentSerializer;
+import eu.monnetproject.coal.CoalAlignment;
 import eu.monnetproject.coal.CoalMatch;
 import eu.monnetproject.coal.CoalReader;
 import eu.monnetproject.data.FileDataSource;
@@ -56,7 +57,7 @@ public class EDOALReader implements CoalReader {
         }
         
         public Alignment readAlignment(Reader reader2, AlignmentSerializer alignmentSerializer, OntologySerializer ontoSerializer) {
-		Alignment alignment = alignmentSerializer.createAlignment();
+		Alignment alignment = new CoalAlignment(null, null);
 		this.reader = new BufferedReader(reader2);
 		boolean onto1 = false;
 		boolean onto2 = false;

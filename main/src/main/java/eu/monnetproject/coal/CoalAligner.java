@@ -42,21 +42,23 @@ public class CoalAligner implements Aligner {
     }
 
     public Alignment align(Ontology ontlg, Ontology ontlg1) {
-        Alignment alignment = new CoalAlignment();
-        align(ontlg1, ontlg1, alignment);
+        Alignment alignment = new CoalAlignment(ontlg,ontlg1);
+        align(alignment);
         return alignment;
     }
     
     public Alignment align(Ontology ontlg, Ontology ontlg1, int k) {
-        Alignment alignment = new CoalAlignment(k);
-        align(ontlg1, ontlg1, alignment);
+        Alignment alignment = new CoalAlignment(k,ontlg,ontlg1);
+        align(alignment);
         return alignment;
     }
 
-    public void align(Ontology srcOntology, Ontology tgtOntology,
-            Alignment alignment, boolean ignoreInstances) {
+    public void align(Alignment alignment, boolean ignoreInstances) {
 
         this.progress = 0;
+        
+        final Ontology srcOntology = alignment.getSourceOntology();
+        final Ontology tgtOntology = alignment.getTargetOntology();
 
         if (srcOntology == null) {
             log.severe("Source ontology is null!");
@@ -70,8 +72,6 @@ public class CoalAligner implements Aligner {
 
         log.info("Aligning " + srcOntology + " and " + tgtOntology);
 
-        alignment.setSourceOntology(srcOntology);
-        alignment.setTargetOntology(tgtOntology);
 
         for (Entity ent1 : srcOntology.getEntities()) {
 
@@ -108,10 +108,9 @@ public class CoalAligner implements Aligner {
      * @param alignment alignment
      */
     @Override
-    public void align(Ontology srcOntology, Ontology tgtOntology,
-            Alignment alignment) {
+    public void align(Alignment alignment) {
 
-        align(srcOntology, tgtOntology, alignment, true);
+        align(alignment, true);
 
     }
 
@@ -125,7 +124,6 @@ public class CoalAligner implements Aligner {
             System.err.println("Usage:\tmvn exec:java -Dexec.mainClass=\"" + CoalAligner.class.getCanonicalName() + "\" -Dexec.args=\"ontology1 ontology2 output [noOfMatches]\"");
             System.exit(-1);
         }
-        Services.get(LabelExtractorFactory.class);
         final OntologySerializer serializer = Services.get(OntologySerializer.class);
         final AlignmentSerializer alignSerializer = Services.get(AlignmentSerializer.class);
         final Aligner aligner = new CoalAligner(new SVMRankMatcher(Services.getAll(EntitySimilarityMeasure.class)));

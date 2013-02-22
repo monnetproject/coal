@@ -75,7 +75,7 @@ public class SVMRankMatcherConfiguration {
     public SVMRankMatcherConfiguration(File file) {
         this.configFile = file;
         this.properties = getConfig();
-        this.modelFile = modelFile;
+        this.modelFile = null;
     }
     
     public SVMRankMatcherConfiguration(File file, File modelFile) {

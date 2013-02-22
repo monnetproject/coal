@@ -6,6 +6,7 @@ import java.util.List;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.sim.EntitySimilarityMeasure;
+import java.io.File;
 
 /**
  * A trainable matcher.
@@ -26,7 +27,7 @@ public interface Matcher {
          * 
          * @param alignment
          */
-        public void train(Collection<Alignment> alignments);
+        public void train(Collection<Alignment> alignments, File modeFile);
         
         public Collection<EntitySimilarityMeasure> getMeasures();
         

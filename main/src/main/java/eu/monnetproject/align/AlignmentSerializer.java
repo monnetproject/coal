@@ -20,11 +20,11 @@ public interface AlignmentSerializer {
 	public void writeAlignment(Alignment alignment, OutputStream stream) throws IOException;
         
 	public void writeAlignment(Alignment alignment, Writer write) throws IOException;
-	
-	public Alignment createAlignment();
-
-	public Alignment createAlignment(int k);
-	
+//	
+//	public Alignment createAlignment();
+//
+//	public Alignment createAlignment(int k);
+//	
 	public Alignment readAlignment(File file);
 
 	public Alignment readAlignment(InputStream stream);

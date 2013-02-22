@@ -110,6 +110,13 @@ public class SVMRankMatcher implements Matcher {
         initMeasures();
     }
     
+    public void reconfigure(File matcherCfg) {
+        this.matcherConfig = new SVMRankMatcherConfiguration(matcherCfg);
+        this.trained = this.matcherConfig.hasModel();
+        this.ignoreInstances = this.matcherConfig.ignoreInstances();
+        initMeasures();
+    }
+    
     private void start() {
         log.info("Activating SVMRankModel");
         this.active = true;
@@ -305,16 +312,9 @@ public class SVMRankMatcher implements Matcher {
      * @return
      * @throws Exception
      */
-    private File executeSVMRankLearn(Map<Entity, List<SVMRankMatchVector>> vectors) throws Exception {
+    private File executeSVMRankLearn(Map<Entity, List<SVMRankMatchVector>> vectors, final File modelOutFile) throws Exception {
 
         SVMRankDataFile datFile = new SVMRankDataFile(vectors);
-        File modelOutFile = null;
-
-        try {
-            modelOutFile = File.createTempFile("model", ".dat", SVMRankMatcher.DEFAULT_DIR);
-        } catch (IOException ex) {
-            throw ex;
-        }
 
         double thisRegularisation = SVMRankMatcher.DEFAULT_REGULARISATION_PARAMETER * new Double(vectors.keySet().size());
 
@@ -373,11 +373,11 @@ public class SVMRankMatcher implements Matcher {
     }
 
     @Override
-    public void train(Collection<Alignment> alignments) {
-        train(alignments, 50);
+    public void train(Collection<Alignment> alignments, File modelFile) {
+        train(alignments, 50, modelFile);
     }
 
-    private void train(Collection<Alignment> alignments, int negativeSamples) {
+    private void train(Collection<Alignment> alignments, int negativeSamples, File modelFile) {
 
         for (Alignment alignment : alignments) {
 
@@ -434,11 +434,9 @@ public class SVMRankMatcher implements Matcher {
             }
         }
 
-        File modelFile = null;
-
         try {
             log.info("Executing SVMrank learn");
-            modelFile = executeSVMRankLearn(vectors);
+            executeSVMRankLearn(vectors,modelFile);
         } catch (Exception ex) {
             log.severe(ex.getMessage());
         }

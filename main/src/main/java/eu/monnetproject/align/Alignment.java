@@ -76,5 +76,7 @@ public interface Alignment {
      * @return maximum number of matches per source entity
      */
     public int getMaximumNumberOfMatches();
+
+    public boolean isEmpty();
                 
 }

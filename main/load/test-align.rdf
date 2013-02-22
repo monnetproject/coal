@@ -1,0 +1,18 @@
+@prefix skos:<http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherCustomLabelProperty> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentCustomLabelProperty> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeOtherClass> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentClass> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someCustomLabelProperty> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentCustomLabelProperty> .
+
+<http://www.w3.org/2000/01/rdf-schema#label> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeClass> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentClass> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#SomeSubClassOfSomeOtherClass> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#ADifferentSubClassOfADifferentClass> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someProperty> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty> .
+
+<http://www.monnetproject.eu/ontologies/coal/test/SourceOntology.owl#someOtherProperty> skos:exactMatch <http://www.monnetproject.eu/ontologies/coal/test/TargetOntology.owl#aDifferentProperty> .
+

@@ -1,5 +1,6 @@
 package eu.monnetproject.sim.entity;
 
+import eu.monnetproject.framework.services.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -40,7 +41,7 @@ public class AverageAverageLevenshtein implements EntitySimilarityMeasure {
 	private boolean includePuns = false;
 	private Translator translator;
 	
-	public AverageAverageLevenshtein(LabelExtractorFactory lef) {
+	@Inject public AverageAverageLevenshtein(LabelExtractorFactory lef) {
             this.lef = lef;
             this.measure = new Levenshtein();
             this.translator = new Translator();

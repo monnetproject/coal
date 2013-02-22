@@ -47,6 +47,7 @@ import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.RepositoryResult;
 import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.rio.RDFFormat;
+import org.openrdf.rio.RDFParseException;
 import org.openrdf.sail.memory.MemoryStore;
 
 /**
@@ -63,7 +64,7 @@ public class SKOSReader implements CoalReader {
             conn = repo.getConnection();
             try {
                 conn.add(file, "file:test", RDFFormat.RDFXML);
-            } catch (RepositoryException x) {
+            } catch (RDFParseException x) {
                 conn.add(file, "file:test", RDFFormat.TURTLE);
             }
             return doRead(conn,ontoSerializer);
@@ -131,9 +132,9 @@ public class SKOSReader implements CoalReader {
     }
 
     private Alignment doRead(RepositoryConnection conn, OntologySerializer ontoSerializer) throws RepositoryException {
-        Alignment alignment = new CoalAlignment();
+        Alignment alignment = new CoalAlignment(null,null);
         final ValueFactory valueFactory = conn.getValueFactory();
-        final OntologyFactory ontoFactory = ontoSerializer.create(null).getFactory();
+        final OntologyFactory ontoFactory = ontoSerializer.create(URI.create("file:test#irrelevant")).getFactory();
         RepositoryResult<Statement> statements = conn.getStatements(null, valueFactory.createURI("http://www.w3.org/2004/02/skos/core#exactMatch"), null, false);
         while(statements.hasNext()) {
             final Statement next = statements.next();

@@ -17,7 +17,7 @@ public interface Aligner {
          * @param tgtOntology target ontology
          * @param alignment the suggested alignment
          */
-        public void align(Ontology srcOntology, Ontology tgtOntology, Alignment alignment);
+        public void align(Alignment alignment);
 
         /**
          * Aligns two ontologies and stores the results in <code>alignment</code>.
