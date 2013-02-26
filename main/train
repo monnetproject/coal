@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$1" == "-v" ]
+then
+  shift
+  mvn exec:java -Dexec.mainClass=eu.monnetproject.coal.CoalTrainer -Dexec.args="$*"
+else
+  mvn -q -f main/pom.xml exec:java -Dexec.mainClass=eu.monnetproject.coal.CoalTrainer -Dexec.args="$*"
+fi

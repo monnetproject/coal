@@ -34,7 +34,7 @@ import java.util.logging.Logger;
  */
 public class SVMRankMatcher implements Matcher {
 
-        private Logger log = Logger.getLogger(SVMRankMatcher.class.getName());
+    private Logger log = Logger.getLogger(SVMRankMatcher.class.getName());
     /**
      * We assume the following static variables as target values (see
      * http://www.cs.cornell.edu/People/tj/svm_light/svm_rank.html).
@@ -90,7 +90,7 @@ public class SVMRankMatcher implements Matcher {
 //		this.trained = true;
 //	}
     public SVMRankMatcher(Collection<EntitySimilarityMeasure> entitySimilarityMeasures) {
-        if(entitySimilarityMeasures.isEmpty()) {
+        if (entitySimilarityMeasures.isEmpty()) {
             throw new IllegalArgumentException("No similarity measures");
         }
         for (EntitySimilarityMeasure measure : entitySimilarityMeasures) {
@@ -104,19 +104,19 @@ public class SVMRankMatcher implements Matcher {
     public void reconfigure(File matcherCfg, File svmRankClassify, File svmRankLearn, File modelFile) {
         this.svmRankClassify = svmRankClassify;
         this.svmRankLearn = svmRankLearn;
-        this.matcherConfig = new SVMRankMatcherConfiguration(matcherCfg,modelFile);
+        this.matcherConfig = new SVMRankMatcherConfiguration(matcherCfg, modelFile);
         this.trained = this.matcherConfig.hasModel();
         this.ignoreInstances = this.matcherConfig.ignoreInstances();
         initMeasures();
     }
-    
+
     public void reconfigure(File matcherCfg) {
         this.matcherConfig = new SVMRankMatcherConfiguration(matcherCfg);
         this.trained = this.matcherConfig.hasModel();
         this.ignoreInstances = this.matcherConfig.ignoreInstances();
         initMeasures();
     }
-    
+
     private void start() {
         log.info("Activating SVMRankModel");
         this.active = true;
@@ -270,7 +270,7 @@ public class SVMRankMatcher implements Matcher {
             Process process = Runtime.getRuntime().exec(cmd);
             final BufferedReader stdout = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String s;
-            while((s = stdout.readLine()) != null) {
+            while ((s = stdout.readLine()) != null) {
                 System.out.println(s);
             }
             process.waitFor();
@@ -378,8 +378,9 @@ public class SVMRankMatcher implements Matcher {
     }
 
     private void train(Collection<Alignment> alignments, int negativeSamples, File modelFile) {
-
         for (Alignment alignment : alignments) {
+            final Ontology sourceOntology = alignment.getSourceOntology();
+            final Ontology targetOntology = alignment.getTargetOntology();
 
             initMeasures();
 
@@ -389,7 +390,13 @@ public class SVMRankMatcher implements Matcher {
 
             int processedMatches = 0;
 
-            for (Entity srcEntity : srcEntities) {
+            for (Entity srcEntity2 : srcEntities) {
+                final Collection<Entity> sourceEntities = sourceOntology.getEntities(srcEntity2.getURI());
+                if (sourceEntities.isEmpty()) {
+                    log.warning(srcEntity2.getURI() + " not found in source ontology");
+                    continue;
+                }
+                final Entity srcEntity = sourceEntities.iterator().next();
 
                 processedMatches++;
 
@@ -414,7 +421,14 @@ public class SVMRankMatcher implements Matcher {
 
                 int negatives = 0;
 
-                for (Entity tgtEntity : alignment.getTargetOntology().getEntities()) {
+                for (Entity tgtEntity2 : alignment.getTargetOntology().getEntities()) {
+
+                    final Collection<Entity> targetEntities = targetOntology.getEntities(tgtEntity2.getURI());
+                    if (targetEntities.isEmpty()) {
+                        log.warning(tgtEntity2.getURI() + " not found in source ontology");
+                        continue;
+                    }
+                    final Entity tgtEntity = targetEntities.iterator().next();
                     if (processed.contains(tgtEntity)) {
                         continue;
                     }
@@ -436,7 +450,7 @@ public class SVMRankMatcher implements Matcher {
 
         try {
             log.info("Executing SVMrank learn");
-            executeSVMRankLearn(vectors,modelFile);
+            executeSVMRankLearn(vectors, modelFile);
         } catch (Exception ex) {
             log.severe(ex.getMessage());
         }
