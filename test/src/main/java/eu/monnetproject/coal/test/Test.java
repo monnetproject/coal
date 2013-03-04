@@ -28,24 +28,26 @@ package eu.monnetproject.coal.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.logging.Logger;
+
+import aQute.bnd.annotation.component.Component;
+import aQute.bnd.annotation.component.Deactivate;
+import aQute.bnd.annotation.component.Reference;
+
+import com.beinformed.framework.osgi.osgitest.TestMonitor;
+import com.beinformed.framework.osgi.osgitest.annotation.TestCase;
+import com.beinformed.framework.osgi.osgitest.annotation.TestSuite;
 
 import eu.monnetproject.align.Aligner;
 import eu.monnetproject.align.Alignment;
 import eu.monnetproject.align.AlignmentSerializer;
 import eu.monnetproject.align.Matcher;
-import eu.monnetproject.ontology.OntologySerializer;
-import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.coal.CoalAlignment;
 import eu.monnetproject.data.FileDataSource;
-import aQute.bnd.annotation.component.*;
-import eu.monnetproject.framework.test.TestMonitor;
-import eu.monnetproject.framework.test.annotation.TestCase;
-import eu.monnetproject.framework.test.annotation.TestSuite;
-
-
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.logging.Logger;
+import eu.monnetproject.ontology.Ontology;
+import eu.monnetproject.ontology.OntologySerializer;
 
 @Component(provide=Object.class)
 @TestSuite(label="eu.monnetproject.coal.test.Test")
