@@ -122,7 +122,7 @@ public class SVMRankMatcher implements Matcher {
         this.active = true;
         Properties properties = Configurator.getConfig("eu.monnetproject.coal");
 
-        File f = new File(properties.getProperty("matcher", "load/matcher.cfg").toString());
+        File f = new File(System.getProperty("matcher", "load/matcher.cfg").toString());
         this.svmRankClassify = new File(properties.getProperty("svm_rank_classify", "load/svm_rank_classify").toString() + (System.getProperty("os.name").startsWith("Windows") ? ".exe" : ""));
         this.svmRankLearn = new File(properties.getProperty("svm_rank_learn", "load/svm_rank_learn").toString() + (System.getProperty("os.name").startsWith("Windows") ? ".exe" : ""));
         this.matcherConfig = new SVMRankMatcherConfiguration(f);
@@ -405,15 +405,28 @@ public class SVMRankMatcher implements Matcher {
                 Set<Entity> processed = new HashSet<Entity>();
 
                 for (Match match : alignment.getMatches(srcEntity)) {
+                    final Entity targetEntity2 = match.getTargetEntity();
+                    
+                    Entity targetEntity;
+                    if(targetEntity2.getURI() == null || targetEntity2.getOntology() == targetOntology) {
+                        targetEntity = targetEntity2;
+                    } else {
+                        final Collection<Entity> sameNamedEntities = targetOntology.getEntities(targetEntity2.getURI());
+                        if(sameNamedEntities != null && !sameNamedEntities.isEmpty()) {
+                            targetEntity = sameNamedEntities.iterator().next();
+                        } else {
+                            targetEntity = targetEntity2;
+                        }
+                    }
 
-                    processed.add(match.getTargetEntity());
+                    processed.add(targetEntity);
 
                     if (match.getRelation().equals(SVMRankMatcher.EXACT_MATCH_RELATION)) {
-                        match(srcEntity, match.getTargetEntity(), SVMRankMatcher.EXACT_MATCH_TARGET);
+                        match(srcEntity, targetEntity, SVMRankMatcher.EXACT_MATCH_TARGET);
                     } else if (match.getRelation().equals(SVMRankMatcher.CLOSE_MATCH_RELATION)) {
-                        match(srcEntity, match.getTargetEntity(), SVMRankMatcher.CLOSE_MATCH_TARGET);
+                        match(srcEntity, targetEntity, SVMRankMatcher.CLOSE_MATCH_TARGET);
                     } else {
-                        log.severe("Unknown matching relation " + match.getRelation() + ". Skipping match " + srcEntity.getURI() + " " + match.getTargetEntity().getURI());
+                        log.severe("Unknown matching relation " + match.getRelation() + ". Skipping match " + srcEntity.getURI() + " " + targetEntity.getURI());
                         continue;
                     }
 
@@ -445,7 +458,7 @@ public class SVMRankMatcher implements Matcher {
                     }
                 }
 
-            }
+            } 
         }
 
         try {

@@ -20,10 +20,11 @@ import java.util.LinkedList;
 public class CoalTrainer {
 
     public static void main(String[] args) throws Exception {
-        if(args.length != 4) {
-            System.err.println("Usage:\n\tmvn exec:java -Dexec.mainClass=" + CoalTrainer.class + " -Dexec.args=\"sourceOntology targetOntology alignment modelOutFile\"");
+        if(args.length != 5) {
+            System.err.println("Usage:\n\tmvn exec:java -Dexec.mainClass=" + CoalTrainer.class + " -Dexec.args=\"sourceOntology targetOntology alignment initConfig modelOutFile\"");
             return;
         }
+        System.setProperty("matcher", args[3]);
         final OntologySerializer serializer = Services.get(OntologySerializer.class);
         final AlignmentSerializer alignSerializer = Services.get(AlignmentSerializer.class);
         final SVMRankMatcher matcher = new SVMRankMatcher(Services.getAll(EntitySimilarityMeasure.class));
@@ -36,6 +37,6 @@ public class CoalTrainer {
             System.err.println("No alignments!");
             return;
         }
-        matcher.train(Collections.singleton(alignment), new File(args[3]));
+        matcher.train(Collections.singleton(alignment), new File(args[4]));
     }
 }

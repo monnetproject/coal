@@ -140,10 +140,16 @@ public class SimilarityUtils {
             return labels;
         }
 
-        labels = new HashMap<Language, Collection<String>>();
+        labels = lex.getLabels(entity);
+        
+        labelCache.put(entity.getURI(), labels);
+        
+        return labels;
+        
+        /*labels = new HashMap<Language, Collection<String>>();
 
         Collection<Entity> entities = entity.getOntology().getEntities(entity.getURI());
-
+        
         for (Entity pun : entities) {
 
             Map<Language, Collection<String>> punLabels = lex.getLabels(pun);
@@ -169,7 +175,7 @@ public class SimilarityUtils {
 
         labelCache.put(entity.getURI(), labels);
 
-        return labels;
+        return labels;*/
 
     }
 
