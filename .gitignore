@@ -1,4 +1,6 @@
 target/
 *~
 .svn
+translation/src/main/resources/load/
+
 

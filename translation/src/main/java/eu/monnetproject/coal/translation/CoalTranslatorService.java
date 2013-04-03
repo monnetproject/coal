@@ -81,6 +81,7 @@ public class CoalTranslatorService extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "No translations!");
         } else {
             resp.setContentType("text/plain");
+            resp.setCharacterEncoding("UTF-8");
             final PrintWriter out = resp.getWriter();
             for (TranslationImpl translation : translations) {
                 out.println(translation.getLabel());
