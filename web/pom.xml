@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>coal.project</artifactId>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
     </parent>
@@ -11,7 +11,7 @@
     <artifactId>coal.web</artifactId>
     <packaging>war</packaging>
 
-    <name>eu.monnetproject.coal.web</name>
+    <name>com.github.monnetproject.coal.web</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

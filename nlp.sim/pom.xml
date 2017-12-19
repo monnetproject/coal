@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>coal.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -12,7 +12,7 @@
     <artifactId>coal.nlp.sim</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.coal.nlp.sim OSGi Bundle</name>
+    <name>com.github.monnetproject.coal.nlp.sim OSGi Bundle</name>
 
 
     <dependencies>
@@ -22,7 +22,7 @@
             <version>1.4.0</version>
         </dependency>
         <!--<dependency>
-            <groupId>eu.monnetproject</groupId>
+            <groupId>com.github.monnetproject</groupId>
             <artifactId>nlp.core</artifactId>
             <version>${project.version}</version>
         </dependency>-->
